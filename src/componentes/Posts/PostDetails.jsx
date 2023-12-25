@@ -73,7 +73,7 @@ export const PostDetails = () => {
       <div>
         <p className='text-xs mt-4 ml-5'>Creado por {selectedPost?.creator} //  {moment(post.createdAt).fromNow()}</p> 
         <h3 className="text-2xl ml-5 font-bold">{selectedPost?.title}</h3>
-        <p className="text-base">{selectedPost?.message}</p>
+        <p className="text-base ml-5">{selectedPost?.message}</p>
       </div>
 
       <div className="w-[400px] h-[400px] sm:w-[700px]  sm:h-[700px] flex mx-auto  ">
