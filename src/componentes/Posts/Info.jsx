@@ -8,7 +8,6 @@ export const Info = () => {
       let animationFrameId;
   
       const handleScroll = () => {
-        // Utilizamos requestAnimationFrame para suavizar el seguimiento de la posición de desplazamiento
         animationFrameId = requestAnimationFrame(() => {
           setScrollPosition(window.scrollY);
         });
@@ -18,7 +17,6 @@ export const Info = () => {
   
       return () => {
         window.removeEventListener('scroll', handleScroll);
-        // Aseguramos que cancelamos el requestAnimationFrame al desmontar el componente
         cancelAnimationFrame(animationFrameId);
       };
     }, []);

@@ -29,9 +29,9 @@ export const PostDetails = () => {
 
 
   return (
-    <div className='min-h-screen mx-60'>
-    <div className=''>
-    <div className=" bg-white p-8 mx-20 shadow rounded-lg shadow-md">
+    <div className='min-h-screen mx-80 max-sm:mx-0 flex justify-center  '>
+    {/* <div className='justify-start'>
+    <div className=" flex bg-white p-8 max-sm:mx-12  shadow rounded-lg shadow-md max-sm:w-[400px] max-sm:bg-red-300 ">
     <div className="flex">
       <div className="flex-1">
         <h3 className="text-2xl font-bold">{selectedPost?.title}</h3>
@@ -67,7 +67,27 @@ export const PostDetails = () => {
 
  
   </div>
-  </div>
+  </div> */}
+
+    <div className='bg-white w-full mx-60 w-[800px] h-full mb-10 mt-2 flex flex-col shadow-xl rounded-lg '>
+      <div>
+        <p className='text-xs mt-4 ml-5'>Creado por {selectedPost?.creator} //  {moment(post.createdAt).fromNow()}</p> 
+        <h3 className="text-2xl ml-5 font-bold">{selectedPost?.title}</h3>
+        <p className="text-base">{selectedPost?.message}</p>
+      </div>
+
+      <div className="w-[400px] h-[400px] sm:w-[700px]  sm:h-[700px] flex mx-auto  ">
+        
+          <img className="object-contain  w-full h-full" src={ selectedPost?.selectedFile?.secure_url ||  'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} alt={post.title} />
+      </div>
+
+
+      <div>
+      <CommentSection post={selectedPost}/>
+      </div>
+
+    </div>
+
   </div>
   )
 }

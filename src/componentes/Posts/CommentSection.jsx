@@ -19,8 +19,29 @@ export const CommentSection = ({ post }) => {
 
   return (
         <div>
-    <div className="flex items-start">
-        <div className="w-2/3 pr-8">
+    <div className="flex items-center flex-col mx-10 sm:mx-10">
+     
+        <form className='w-full' onSubmit={handleSubmit}>
+        <div className=" flex flex-col mt-10">
+        <h6 className="mb-4 text-xl font-bold ">Escribe tu comentario</h6>
+        <textarea
+            rows={4}
+            className="w-full border p-2 mb-4 resize-none"
+            placeholder="Comment"
+            value={comentario2}
+            onChange={(e) => setComentario2(e.target.value)}
+        />
+        <button
+            className="w-full py-2 px-4 bg-blue-500 text-white rounded-md disabled:opacity-50"
+         
+        >
+            Enviar
+        </button>
+        </div>
+        </form>
+
+
+        <div className="w-full mt-4 pr-8 ">
         <h6 className="mb-4 text-xl font-bold">Comentarios</h6>
         
         {post?.comments?.map((comentario, index) => (
@@ -40,24 +61,6 @@ export const CommentSection = ({ post }) => {
         
         <div  />
         </div>
-        <form className='w-[600px]' onSubmit={handleSubmit}>
-        <div className="w-1/2">
-        <h6 className="mb-4 text-xl font-bold">Escribe un comentario</h6>
-        <textarea
-            rows={4}
-            className="w-full border p-2 mb-4 resize-none"
-            placeholder="Comment"
-            value={comentario2}
-            onChange={(e) => setComentario2(e.target.value)}
-        />
-        <button
-            className="w-full py-2 px-4 bg-blue-500 text-white rounded-md disabled:opacity-50"
-         
-        >
-            Enviar
-        </button>
-        </div>
-        </form>
     </div>
     </div>
   )
