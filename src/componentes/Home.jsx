@@ -11,7 +11,6 @@ import {Link}from 'react-router-dom'
 
 export const Home = () => {
   const [currentId, setCurrentId] = useState(0);
-  const dispatch = useDispatch();
 
 
   const state = useSelector((state) => state.posts);
@@ -23,6 +22,14 @@ export const Home = () => {
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = state?.slice(firstPostIndex, lastPostIndex);
+
+
+  const dispatch= useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts())
+}, [])
+
 
   return (
 

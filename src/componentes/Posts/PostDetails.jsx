@@ -13,9 +13,6 @@ export const PostDetails = () => {
     console.log(post)
     const dispatch= useDispatch();
 
-    useEffect(() => {
-      dispatch(getPosts())
-  }, [])
 
 
   const selectedPost = post?.find(item => item._id === id);

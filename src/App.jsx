@@ -42,8 +42,13 @@ function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        {/* <Route index element={<Navigate to="/posts" />} />
-        <Route path="/posts" element={<Home />} /> */}
+      <Route
+        index
+        element={<Navigate to="/post/home" />} 
+        // Puedes ajustar la ruta según tus necesidades
+      />
+     
+      
         <Route
           
             path="/auth/*"

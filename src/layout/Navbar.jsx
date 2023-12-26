@@ -10,7 +10,8 @@ import {  logoutAction } from '../actions/auth';
 export const Navbar = ({}) => {
   const dispatch = useDispatch()
   const state = useSelector((state) => state.auth);
-  const nombre = state?.user?.usuario?.name
+  console.log(state)
+  const nombre = state?.user?.user?.name
   const authenticado = state?.isAuthenticated
 
     const logout = ()=>{
@@ -32,11 +33,9 @@ export const Navbar = ({}) => {
         </div>
         <Link to='/post/home'>
 
-        <p className='font-bold text-1xl'>Publicaciones</p>
-       
+        <p className='font-bold text-1xl'>Publicaciones</p> 
         </Link>
       
-        
         <button  className="text-white cursor-pointer">
           <div className=' flex flex-col mt-1 md:flex-row '>
 
@@ -46,7 +45,7 @@ export const Navbar = ({}) => {
             {state.isAuthenticated && <button onClick={logout} className='mx-2 text-black rounded bg-sky-300 p-2 font-bold'>Cerrar session</button>}
 
 
-            {authenticado ? (
+            {authenticado  ? (
                
               <p className='text-black font-bold font-sans p-2 '>
                 Bienvenido: {nombre}  
