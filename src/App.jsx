@@ -11,7 +11,7 @@ import {PublicRoute} from './router/PublicRouter'
 import { PrivateRoute } from './router/PrivateRouter'
 import { useEffect } from 'react'
 import { autenticarUsuario } from './actions/auth'
-import { Formulario } from './componentes/form/Formulario'
+
 
 function App() {
 
