@@ -13,10 +13,6 @@ export const Home = () => {
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getPosts())
-  }, [])
-
 
   const state = useSelector((state) => state.posts);
   const auth = useSelector((state) => state.auth);
@@ -30,12 +26,12 @@ export const Home = () => {
 
   return (
 
-    <div className="m-4 min-h-screen flex flex-col ">
-      <div className="p-4 flex-grow">
-        <div className="container">
+    <div className=" min-h-screen flex flex-col ">
+      <div className=" flex-grow">
+        <div className="container m-0">
           <div className="grid grid-cols-[1fr]  xs:grid-cols-[1fr_0.5fr]  xl:grid-cols-[1fr_0.4fr]  ">
             <div className='flex flex-col items-end '>
-              <div className='  w-[400px] md:w-[600px] '>
+              <div className='  w-[400px]  md:w-[600px] '>
                 <Link to='/post/createpost'>
                 <CreatePost />  
                 </Link>
@@ -52,6 +48,10 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
+
+
+      
 
       <Pagination
         totalPosts={state.length}
