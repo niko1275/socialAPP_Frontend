@@ -12,6 +12,7 @@ import { PrivateRoute } from './router/PrivateRouter'
 import { useEffect } from 'react'
 import { autenticarUsuario } from './actions/auth'
 import { getPosts } from './actions/posts'
+import { Footer } from './layout/Footer'
 
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
 }, [])
 
   return (
+    <>
+    
+
     <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -75,8 +79,9 @@ function App() {
       
       </Routes>
     </BrowserRouter>
+    <Footer/>
 
-
+    </>
     
       
   )

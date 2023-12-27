@@ -11,6 +11,7 @@ import {Link}from 'react-router-dom'
 
 export const Home = () => {
   const [currentId, setCurrentId] = useState(0);
+  const dispatch = useDispatch();
 
 
   const state = useSelector((state) => state.posts);
@@ -23,22 +24,14 @@ export const Home = () => {
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = state?.slice(firstPostIndex, lastPostIndex);
 
-
-  const dispatch= useDispatch();
-
-  useEffect(() => {
-    dispatch(getPosts())
-}, [])
-
-
   return (
 
     <div className=" min-h-screen flex flex-col ">
       <div className=" flex-grow">
-        <div className="container m-0">
+        <div className="max-w-screen-lg mx-auto">
           <div className="grid grid-cols-[1fr]  xs:grid-cols-[1fr_0.5fr]  xl:grid-cols-[1fr_0.4fr]  ">
             <div className='flex flex-col items-end '>
-              <div className='  w-[400px]  md:w-[600px] '>
+              <div className=' '>
                 <Link to='/post/createpost'>
                 <CreatePost />  
                 </Link>

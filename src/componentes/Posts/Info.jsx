@@ -2,33 +2,33 @@ import React, { useEffect, useState } from 'react'
 
 export const Info = () => {
 
-    const [scrollPosition, setScrollPosition] = useState(0);
+    // const [scrollPosition, setScrollPosition] = useState(0);
 
-    useEffect(() => {
-      let animationFrameId;
+    // useEffect(() => {
+    //   let animationFrameId;
   
-      const handleScroll = () => {
-        animationFrameId = requestAnimationFrame(() => {
-          setScrollPosition(window.scrollY);
-        });
-      };
+    //   const handleScroll = () => {
+    //     animationFrameId = requestAnimationFrame(() => {
+    //       setScrollPosition(window.scrollY);
+    //     });
+    //   };
   
-      window.addEventListener('scroll', handleScroll);
+    //   window.addEventListener('scroll', handleScroll);
   
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-        cancelAnimationFrame(animationFrameId);
-      };
-    }, []);
+    //   return () => {
+    //     window.removeEventListener('scroll', handleScroll);
+    //     cancelAnimationFrame(animationFrameId);
+    //   };
+    // }, []);
   
-    const infoStyle = {
-      transform: `translateY(${scrollPosition}px)`,
-      transition: 'transform 0.3s linear',
-    };
+    // const infoStyle = {
+    //   transform: `translateY(${scrollPosition}px)`,
+    //   transition: 'transform 0.3s linear',
+    // };
   
   
   return (
-    <div style={infoStyle} class="max-w-sm rounded overflow-hidden shadow-lg">
+    <div  class="max-w-sm rounded overflow-hidden shadow-lg">
 
   <div class="px-6 py-4">
     <div class="font-bold text-xl mb-2">Social App</div>
