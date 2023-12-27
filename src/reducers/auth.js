@@ -10,14 +10,14 @@ export const authSlice = createSlice({
     error: null, },
   reducers: {
     authSuccess: (state, action) => {
- 
-      console.log(action.payload.user)
+      console.log('autentitacion?')
+      console.log(action.payload)
       localStorage.setItem('tokenn', action.payload.token);
-   
-        state.user=  action.payload.user;
-        state.token= action.payload.token;
-        state.isAuthenticated=action.payload.isAuthenticated=true;
-        state.error= null;
+      localStorage.setItem('autenticado',action.payload.isAuthenticated=true)
+      state.user=  action.payload.user;
+      state.token= action.payload.token;
+      state.isAuthenticated=action.payload.isAuthenticated=true;
+      state.error= null;
     
     },
     authFailure: (state, action) => {

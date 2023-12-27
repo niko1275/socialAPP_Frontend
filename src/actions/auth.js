@@ -10,7 +10,7 @@ export const signin = (formData) => async (dispatch) => {
 
     try {
       const { data } = await api.signIn(formData);
-      console.log(data)
+
       dispatch(authSuccess({ user: data.result, token:data.token }));
     } 
     catch (error) {
@@ -22,7 +22,7 @@ export const signin = (formData) => async (dispatch) => {
 export const signup = (formData) => async (dispatch) => {
 try {
     const { data } = await api.signUp(formData);
-    console.log(data)
+s
     dispatch(logout(data));
 
 } catch (error) {
@@ -46,7 +46,7 @@ export const autenticarUsuario = () => async (dispatch)=>{
   
   try {
     const {data } = await api.autenticar();
-    console.log(data)
+
     dispatch(loginSuccess(data));
     
   }

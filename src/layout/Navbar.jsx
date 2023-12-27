@@ -10,9 +10,10 @@ import {  logoutAction } from '../actions/auth';
 export const Navbar = ({}) => {
   const dispatch = useDispatch()
   const state = useSelector((state) => state.auth);
+  const authenticado = localStorage.getItem('autenticado')
   console.log(state)
   const nombre = state?.user?.user?.name
-  const authenticado = state?.isAuthenticated
+
 
     const logout = ()=>{
         try {
@@ -27,7 +28,7 @@ export const Navbar = ({}) => {
 
         <>
 
-<div className="flex bg-white shadow p-3 flex-col items-center md:flex-row md:justify-between m-4 rounded-xl">
+  <div className="flex bg-white shadow p-3 flex-col items-center md:flex-row md:justify-between m-4 rounded-xl">
          <div className='flex items-center'>
           <h1 className='font-bold text-black text-2xl mr-2'>Social APP</h1>
         </div>

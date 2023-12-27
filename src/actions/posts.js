@@ -37,10 +37,9 @@ export const updatePost = (id, post) => async (dispatch) => {
 
 export const likePost = (id,userId) => async (dispatch) => {
   try {
-    console.log(id)
-    console.log(userId)
+
     const { data } = await api.likePost(id,userId);
-    console.log(data)
+
     dispatch(likePosts(data));
 
   } catch (error) {

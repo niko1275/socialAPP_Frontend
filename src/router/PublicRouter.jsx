@@ -4,6 +4,7 @@ import { AuthRouter } from "./AuthRouter";
 export const PublicRoute = ({ isAuthenticated }) => {
   console.log(isAuthenticated)
   return !isAuthenticated ? (
+    
     <AuthRouter />
   ) : (
     <Navigate to="/post/home"/>
