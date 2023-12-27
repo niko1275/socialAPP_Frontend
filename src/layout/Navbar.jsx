@@ -12,7 +12,7 @@ export const Navbar = ({}) => {
   const state = useSelector((state) => state.auth);
   const authenticado = localStorage.getItem('autenticado')
   console.log(state)
-  const nombre = state?.user?.user?.name
+  const nombre = state?.user?.usuario?.name
 
 
     const logout = ()=>{
