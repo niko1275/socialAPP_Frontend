@@ -32,7 +32,7 @@ const Pagination = ({
   const visiblePages = getVisiblePages();
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mb-10 ">
       {visiblePages.map((page, index) => (
         <button
           key={index}

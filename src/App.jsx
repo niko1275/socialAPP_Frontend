@@ -49,8 +49,7 @@ function App() {
 }, [])
 
   return (
-    <>
-    
+ 
 
     <BrowserRouter>
       <Navbar/>
@@ -78,10 +77,12 @@ function App() {
 
       
       </Routes>
+      <Footer/>
     </BrowserRouter>
-    <Footer/>
+    
 
-    </>
+
+   
     
       
   )

@@ -59,7 +59,7 @@ export const LoginPage = () => {
 
 
 
-        <input type='submit' className='py-3 text-white uppercase font-bold bg-sky-600 rounded w-full hover:cursor-pointer hover:bg-sky-700 transition-colors ' value='Crear Cuenta'/>
+        <input type='submit' className='py-3 text-white uppercase font-bold bg-sky-600 rounded w-full hover:cursor-pointer hover:bg-sky-700 transition-colors ' value='Ingresar'/>
 
     </form>
 
