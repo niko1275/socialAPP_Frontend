@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { PostContainer } from './Posts/PostContainer'
-import { Navbar } from '../layout/Navbar'
-import { Formulario } from './form/Formulario'
 import { useDispatch, useSelector } from 'react-redux'
-import { getPosts } from '../actions/posts'
 import Pagination from './pagination/Pagination'
 import { CreatePost } from './Posts/CreatePost'
 import { Info } from './Posts/Info'
 import {Link}from 'react-router-dom'
 
-export const Home = () => {
-  const [currentId, setCurrentId] = useState(0);
-  const dispatch = useDispatch();
 
+
+export const Home = () => {
 
   const state = useSelector((state) => state.posts);
-  const auth = useSelector((state) => state.auth);
-
+ 
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(4);
 
@@ -35,7 +30,7 @@ export const Home = () => {
                 <Link to='/post/createpost'>
                 <CreatePost />  
                 </Link>
-               
+              
                 <PostContainer state={currentPosts} />
               </div>
            

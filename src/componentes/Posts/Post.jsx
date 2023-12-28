@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { Link } from 'react-router-dom';
 import { likePost } from '../../actions/posts';
+import { Dropdown } from '../ui/Dropdown';
 
 
 export const Post = ({ post }) => {
@@ -24,6 +25,7 @@ export const Post = ({ post }) => {
   return (
     <div className=" my-4 bg-white shadow-md rounded-md overflow-hidden  ">
         <div className="flex items-center justify-center">
+        
           <img
             className="object-cover object-top w-full shadow h-80"
             src={
@@ -36,10 +38,7 @@ export const Post = ({ post }) => {
          
         </div>
         <div className="p-4">
-          <div className="flex items-center justify-between mb-2">
-          
-
-
+          <div className="flex  justify-between mb-2">      
             <div>
             {Array.isArray(post.tags) ? (
               post.tags.map((tag, index) => (
@@ -52,8 +51,13 @@ export const Post = ({ post }) => {
                 #{post.tags.trim()}
               </span>
             )}
+            
+            </div>
+            <p>
+              <Dropdown/>
+            </p>
           </div>
-          </div>
+
           <div className="mb-2">
             <p className="text-gray-500 text-sm"></p>
           </div>
