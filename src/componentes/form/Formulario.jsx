@@ -58,45 +58,13 @@ export const Formulario = () => {
 
   };
 
-  
-
-  // const handleSubmit2 = async (e) => {
-  //   e.preventDefault();
-
-  //   const formData = new FormData();
-  //   formData.append('selectedFile', selectedFile);
-  //   formData.append('creator', creator)
-  //   formData.append('title', title)
-  //   formData.append('message', message)
-  //   formData.append('tags', tags)
-  //   formData.append('userId',userId)
-
-  //   if (currentId === 0) {
-
-  //     await dispatch(createPost(formData));
-  //     toast.success('Post creado con exito')
-  //     setCreator('')
-  //     setTitle('')
-  //     setMessage('')
-  //     setTags('')
-  //     setSelectedFile('')
-
-      
-
-  //   } else {
-
-  //     dispatch(updatePost(currentId, formData));
-
-  //   }
-  // };
-
 
   return (
     <div className="">
       <Toaster/>
     
       <form
-      className="mx-auto max-w-xl mt-20 bg-white p-6 rounded-md shadow-md"
+      className="mx-auto max-w-xl  bg-white p-6 rounded-md shadow-md"
       autoComplete="off"
       noValidate
       onSubmit={handleSubmit(onSubmit)}
@@ -196,7 +164,10 @@ export const Formulario = () => {
         Limpiar
       </button>
     </form>
+
     </div>
+
+
   )
 }
 

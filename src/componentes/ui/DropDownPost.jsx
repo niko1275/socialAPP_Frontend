@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { deletePost } from '../../actions/posts';
 import { Link } from 'react-router-dom';
 import useSweetAlert from '../Alerta';
+import { useDispatch } from 'react-redux';
 export const DropDownPost = ({postId}) => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const dispatch = useDispatch()
     const toggleDropdownState = () => {
         console.log(isOpen)
       setIsOpen(!isOpen);

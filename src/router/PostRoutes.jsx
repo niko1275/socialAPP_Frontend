@@ -5,6 +5,7 @@ import { Home } from "../componentes/Home";
 import { PostDetails } from "../componentes/Posts/PostDetails";
 import { Formulario } from "../componentes/form/Formulario";
 
+
 export const PostRoutes = () => {
   return (
     <Routes>
@@ -12,6 +13,7 @@ export const PostRoutes = () => {
         <Route path=":id" element={<PostDetails/>} />
         <Route path='createpost' element={<Formulario/>}/>
         <Route path="editPost/:postId" element={<Formulario/>}/>
+
     </Routes>
   )
 }

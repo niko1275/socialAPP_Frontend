@@ -18,8 +18,8 @@ export const CommentSection = ({ post }) => {
     }
 
   return (
-    <div>
-        <div className="flex items-center flex-col mx-10 sm:mx-10">
+    <div className=''>
+        <div className="flex items-center flex-col mx-10  sm:mx-10">
             <form className='w-full' onSubmit={handleSubmit}>
             <div className=" flex flex-col mt-10">
             <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Escribe tu comentario</label>
@@ -67,14 +67,12 @@ export const CommentSection = ({ post }) => {
                 </li>
             </ol>
             ))}
-
-
-
-
-
-            
+         
             <div  />
             </div>
+
+
+           
         </div>
 
         <div className='flex items-end'>  

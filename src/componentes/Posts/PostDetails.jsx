@@ -32,6 +32,7 @@ export const PostDetails = () => {
           <p className='mx-10 mb-3 text-gray-500 dark:text-gray-400'>{selectedPost?.message}</p>
         </div>
         <div class="border-b-8 mb-1 border-slate-500-500 w-full mt-1"></div>
+        
         <CommentSection post={selectedPost}/>
         
       </div>

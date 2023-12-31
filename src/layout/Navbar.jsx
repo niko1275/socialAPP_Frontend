@@ -23,10 +23,10 @@ export const Navbar = ({}) => {
     return (
         <>
 
-  <div className="flex px-20 bg-white shadow p-3 flex-col items-center md:flex-row md:justify-between mb-4">
+  <div className="flex px-20 bg-white shadow p-3 flex-col items-center md:flex-row md:justify-between mb-4 ">
     
          <div className='flex items-center'>
-          <h1 className='font-bold text-black text-2xl mr-2'>Social APP</h1>
+         <h1 class=" text-2xl font-extrabold text-gray-900 dark:text-white "><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">SocialAPP</span> </h1>
   
         </div>
         <Link to='/post/home'>
