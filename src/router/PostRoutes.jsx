@@ -11,6 +11,7 @@ export const PostRoutes = () => {
         <Route path="home" element={<Home/>}/>
         <Route path=":id" element={<PostDetails/>} />
         <Route path='createpost' element={<Formulario/>}/>
+        <Route path="editPost/:postId" element={<Formulario/>}/>
     </Routes>
   )
 }

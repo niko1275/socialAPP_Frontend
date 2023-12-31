@@ -59,8 +59,6 @@ function App() {
         element={<Navigate to="/post/home" />} 
         // Puedes ajustar la ruta según tus necesidades
       />
-     
-      
         <Route
           
             path="/auth/*"

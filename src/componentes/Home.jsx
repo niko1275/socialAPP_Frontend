@@ -11,7 +11,9 @@ import {Link}from 'react-router-dom'
 export const Home = () => {
 
   const state = useSelector((state) => state.posts);
- 
+  const state2 = useSelector((state)=>state.auth)
+  console.log(state)
+  console.log(state2)
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(4);
 

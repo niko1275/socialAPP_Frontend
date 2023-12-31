@@ -16,7 +16,7 @@ export const postsSlice = createSlice({
       return [...state, action.payload];
     },
     updatePosts: (state, action) => {
-      return state.map((post) => (post._id === action.payload._id ? action.payload.updatePost : post));
+      return state.map((post) => (post._id === action.payload._id ? action.payload : post));
     },
     deletePosts: (state, action) => {
       return state.filter((post) => post._id !== action.payload);

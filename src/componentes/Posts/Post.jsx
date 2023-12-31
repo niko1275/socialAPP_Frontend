@@ -3,29 +3,33 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { Link } from 'react-router-dom';
 import { likePost } from '../../actions/posts';
-import { Dropdown } from '../ui/Dropdown';
-
+import useAdmin from '../../hooks/useAdmin';
+import toast, { Toaster } from 'react-hot-toast';
+import { DropDownPost } from '../ui/DropDownPost';
 
 export const Post = ({ post }) => {
 
   const dispatch = useDispatch();
 
   const auth= useSelector((state)=>state.auth);
-  const existe = auth?.user?.usuario?._id;
- 
 
+  
   const handleLike = async (id,userId) => {
       if(userId){
-       
-        dispatch(likePost(id,userId));
-      }
-     
+      
+        dispatch(likePost(id,userId));       
+      }     
   };
+
+
+ 
 
   return (
     <div className=" my-4 bg-white shadow-md rounded-md overflow-hidden  ">
+      <Toaster/>
+      
         <div className="flex items-center justify-center">
-        
+
           <img
             className="object-cover object-top w-full shadow h-80"
             src={
@@ -53,9 +57,14 @@ export const Post = ({ post }) => {
             )}
             
             </div>
-            <p>
-              <Dropdown/>
-            </p>
+
+            <div>
+              {
+                useAdmin(post._id) &&  <DropDownPost postId={post._id}/>
+              }
+               
+            </div>
+         
           </div>
 
           <div className="mb-2">
@@ -83,9 +92,8 @@ export const Post = ({ post }) => {
               </svg>
 
             </svg>
-            Like {post.likes.length}
+            {post?.likes?.length}
           </button>
-
 
           <button
             className="text-sky-900  hover:underline"
@@ -108,8 +116,7 @@ export const Post = ({ post }) => {
               Comentar
             </Link>
           </button>
-
-          
+    
         </div>
     </div>
 
